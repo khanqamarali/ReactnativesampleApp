@@ -17,7 +17,10 @@ class  AlbumList extends Component {
     renderAlbum()
     {
 
-        return this.state.albums.map(album => <AlbumDetailPage key = {album.title}  data = {album} >{album.title} </AlbumDetailPage>);
+        return this.state.albums.map(album =>
+            <AlbumDetailPage key = {album.title}  album = {album} />
+
+        );
     }
 
     render()
