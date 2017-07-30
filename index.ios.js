@@ -4,6 +4,8 @@ import Header from "./src/component/header";
 import AlbumList from  "./src/component/AlbumList";
 
 
+
+
 const myApp = () => {
 
     return(
