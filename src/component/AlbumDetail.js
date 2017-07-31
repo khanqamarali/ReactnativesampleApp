@@ -1,13 +1,14 @@
 import React ,{ Component } from 'react'
 import {  Text,View,Image } from 'react-native';
 import Card from './card';
-import CardSection from './cardSection'
+import CardSection from './cardSection';
+import Button from './button';
 
 const AlbumDetailPage = ({album}) => {
 
     const {thumbnail_image,title,artist,image} = album;
     const {headerStyle,ContainerthumnailStyle,
-        headerTextStyle, thumnailStyle} = Styles;
+        headerTextStyle, thumnailStyle,imageStyle} = Styles;
 
     return (
         <Card>
@@ -23,10 +24,11 @@ const AlbumDetailPage = ({album}) => {
             </CardSection>
             <CardSection>
                 <Image source={{uri : image}}
-                       style = {thumnailStyle}/>
-
+                       style = {imageStyle}/>
             </CardSection>
-
+            <CardSection>
+                <Button />
+            </CardSection>
         </Card>
    );
 
@@ -50,7 +52,12 @@ const Styles = {
         alignItems : 'center',
         marginLeft :  10,
         marginRight : 10
-    }
+    },
+    imageStyle : {
+        height :  150,
+        flex : 1,
+        width : null
+    },
 
 }
 
