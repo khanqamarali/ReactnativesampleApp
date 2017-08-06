@@ -1,5 +1,5 @@
 import React ,{ Component } from 'react'
-import {  Text,View,Image,Linking } from 'react-native';
+import {  Text,View,Image,Linking,TextInput } from 'react-native';
 import Card from './card';
 import CardSection from './cardSection';
 import Button from './button';
@@ -28,6 +28,10 @@ const AlbumDetailPage = ({album}) => {
             </CardSection>
             <CardSection>
                 <Button onPress={() => Linking.openURL(url) } />
+            </CardSection>
+            <CardSection>
+                <TextInput  style={{height : 20, width : 100 , borderWidth:1}} />
+
             </CardSection>
         </Card>
    );
