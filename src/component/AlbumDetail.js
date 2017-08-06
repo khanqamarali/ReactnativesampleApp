@@ -20,6 +20,9 @@ const AlbumDetailPage = ({album}) => {
                 <View style = {headerStyle}>
                 <Text style = {headerTextStyle}>{title}</Text>
                 <Text>{artist}</Text>
+
+
+
                 </View>
             </CardSection>
             <CardSection>
